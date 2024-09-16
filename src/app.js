@@ -1,84 +1,45 @@
+/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  const letterNumber1 = document.querySelector("#letterNUMBER");
-  letterNumber1.innerHTML = generarLetraAleatoria();
-
-  const iconorow1 = document.querySelector("#iconos2");
-  const iconorow2 = document.querySelector("#iconos1");
-
-  const iconoAleatorio = generarIconoAleatorio();
-  iconorow1.innerHTML = iconoAleatorio;
-  iconorow2.innerHTML = iconoAleatorio;
+  //write your code here
+  function card() {
+    let icon1 = document.querySelector("#icon1");
+    let bothIcons = (icon1.innerHTML = randomIcon());
+    let icon = document.querySelector("#icon2");
+    icon.innerHTML = bothIcons;
+    let number1 = document.querySelector("#myNumber");
+    number1.innerHTML = randomNumber();
+  }
+  card();
 };
 
-function generarLetraAleatoria() {
-  const letras = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z"
-  ];
-  const indiceAleatorio = Math.floor(Math.random() * letras.length);
-  return letras[indiceAleatorio];
+function randomNumber() {
+  let number1 = Math.floor(Math.random() * 13) + 1;
+  if (number1 === 11) {
+    return "J";
+  } else if (number1 === 12) {
+    return "Q";
+  } else if (number1 === 13) {
+    return "K";
+  } else if (number1 === 1) {
+    return "A";
+  }
+  let number2 = number1;
+  return number2;
 }
 
-function generarIconoAleatorio() {
-  const iconos = ["♥", "♦", "♣", "♠"]; // Ejemplo de iconos de cartas
-  const indiceAleatorio = Math.floor(Math.random() * iconos.length);
-  return iconos[indiceAleatorio];
-}
+function randomIcon() {
+  let icons = Math.floor(Math.random() * 4);
+  let arricons = ["♠", "♥", "♦", "♣"];
+  if (icons === 1 || icons === 2) {
+    document.getElementById("icon1").classList.add("red");
+    document.getElementById("icon2").classList.add("red");
+  }
 
-function generarCarta() {
-  const palos = ["corazones", "picas", "tréboles", "diamantes"];
-  const valores = [
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K",
-    "A"
-  ];
-
-  const paloAleatorio = Math.floor(Math.random() * palos.length);
-  const valorAleatorio = Math.floor(Math.random() * valores.length);
-
-  const carta = {
-    palo: palos[paloAleatorio],
-    valor: valores[valorAleatorio]
-  };
-
-  return carta;
+  icons = arricons[icons];
+  return icons;
 }

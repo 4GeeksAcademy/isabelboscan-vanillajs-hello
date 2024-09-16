@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>isa cartas</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <title>Random Isa Card Generator</title>
+    <link rel="shortcut icon" href="assets/img/4geeks.ico" />
   </head>
   <body>
-    <div class="container mx-auto mt-3 b-20" style="max-width: 350px;"></div>
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col" id="letterNUMBER"></div>
-              <div id="iconos1"></div>
-              <div id="iconos2"></div>
-            </div>
-            <div class="row">
-              <div class="col" id="iconos2" style="margin-left: 170px;"></div>
-            </div>
-          </div>
+    <div class="float-md-none">
+      <div class="fullContainer text-center">
+        <div class="container-fluid">
+          <span class="left-icon" id="icon1"></span>
+          <span class="number" id="myNumber"></span>
+          <span class="right-icon" id="icon2"></span>
         </div>
       </div>
+      <br />
+      <div class="fixed-bottom text-center p-4">
+        Made with ❤️ by
+        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      </div>
     </div>
-    <script src="app.js"></script>
+    <br />
   </body>
 </html>

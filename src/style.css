@@ -1,35 +1,43 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-
 body {
+  background: green;
+}
+
+.container-fluid {
+  background: white;
   margin: auto;
-  background-color: green; /* Fondo verde */
+  margin-top: 2rem;
+  height: 500px;
+  width: 350px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  .left-icon {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 80px;
+  }
+  .right-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    font-size: 80px;
+  }
+  .number {
+    line-height: 450px;
+    font-size: 80px;
+  }
 }
-
-.card {
-  width: 200px; /* Ancho fijo para la carta */
-  height: 300px; /* Altura fija para la carta */
-  margin: 20px auto; /* Centra la carta horizontalmente */
-  padding: 10px; /* Espaciado interno */
-  text-align: center; /* Centra el texto dentro de la carta */
-  border: 1px solid #000; /* Borde negro para simular una carta */
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: white; /* Fondo blanco para la carta */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+.red {
+  color: red;
 }
-
-#letterNUMBER {
-  font-size: 48px; /* Tamaño de letra más pequeño */
-  font-weight: 900;
-  margin: 10px 0; /* Espaciado vertical */
+.right-icon {
+  transform: scaleY(-1);
 }
-
-#iconos1,
-#iconos2 {
-  font-size: 60px; /* Tamaño de iconos más pequeño */
-  color: black;
-  margin: 5px; /* Espaciado entre iconos */
-}
-
-#iconos2 {
-  transform: scaleY(-1); /* Invertir el icono */
+#countdown {
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
